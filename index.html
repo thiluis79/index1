@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page de Teste para Conversões</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .cta-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .whatsapp-button {
+            background-color: #25D366;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        #vsl {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header class="section">
+        <h1>Bem-vindo à Nossa Landing Page de Teste</h1>
+        <p>Descubra nossos incríveis produtos e serviços!</p>
+    </header>
+
+    <section id="vsl-section" class="section">
+        <h2>Assista ao Nosso Vídeo</h2>
+        <video id="vsl" controls>
+            <source src="video.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </section>
+
+    <section id="features" class="section">
+        <h2>Nossos Recursos</h2>
+        <ul>
+            <li>Recurso 1</li>
+            <li>Recurso 2</li>
+            <li>Recurso 3</li>
+        </ul>
+        <button class="cta-button" onclick="gtag('event', 'click', {'event_category': 'CTA', 'event_label': 'Saiba Mais'})">Saiba Mais</button>
+    </section>
+
+    <section id="testimonials" class="section">
+        <h2>O Que Nossos Clientes Dizem</h2>
+        <blockquote>"Produto incrível! Mudou minha vida." - Cliente A</blockquote>
+        <blockquote>"Atendimento excepcional!" - Cliente B</blockquote>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Entre em Contato</h2>
+        <form onsubmit="gtag('event', 'submit', {'event_category': 'Form', 'event_label': 'Contact Form'})">
+            <input type="text" name="name" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu E-mail" required>
+            <textarea name="message" placeholder="Sua Mensagem" required></textarea>
+            <button type="submit" class="cta-button">Enviar</button>
+        </form>
+    </section>
+
+    <section id="whatsapp" class="section">
+        <h2>Fale Conosco no WhatsApp</h2>
+        <a href="https://wa.me/5519989673131" class="whatsapp-button" onclick="gtag('event', 'click', {'event_category': 'WhatsApp', 'event_label': 'WhatsApp Button'})">Iniciar Conversa</a>
+    </section>
+
+    <footer class="section">
+        <p>&copy; 2024 Sua Empresa. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '462323924');
+    </script>
+</body>
+</html>
